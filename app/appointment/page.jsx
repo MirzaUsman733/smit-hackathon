@@ -1,30 +1,30 @@
-"use client"
-import { NextResponse } from "next/server"
-import { useState } from "react"
-const initialState = { name: "", medicalHistory: "",contactDetail:'' }
+// "use client"
+// import { NextResponse } from "next/server"
+// import { useState } from "react"
+// const initialState = { name: "", medicalHistory: "",contactDetail:'' }
 export default function page() {
-    const [state, setState] = useState(initialState)
-    const handleChange = e => setState(s => ({ ...s, [e.target.name]: e.target.value }))
+    // const [state, setState] = useState(initialState)
+    // const handleChange = e => setState(s => ({ ...s, [e.target.name]: e.target.value }))
 
-    const submit = async (e) =>{
-        e.preventDefault();
-        let { name, medicalHistory ,contactDetail } = state
-        console.log(name,"->",medicalHistory,"->",contactDetail)
-        try {
-            let addData = await fetch('http://localhost:3000/api/appointment ', {
-                method: 'POST',
-                // headers: {
-                //     'Content-Type': 'application/json'
-                // },
-                body: JSON.stringify({ name, medicalHistory ,contactDetail })
-            })
-            // addData = await addData.json();
-            if (addData.success) alert('Data has been Added')
-            return NextResponse.json(addData)
-        } catch (error) {
-            console.error(error)
-        }
-    }
+    // const submit = async (e) =>{
+    //     e.preventDefault();
+    //     let { name, medicalHistory ,contactDetail } = state
+    //     console.log(name,"->",medicalHistory,"->",contactDetail)
+    //     try {
+    //         let addData = await fetch('http://localhost:3000/api/appointment ', {
+    //             method: 'POST',
+    //             // headers: {
+    //             //     'Content-Type': 'application/json'
+    //             // },
+    //             body: JSON.stringify({ name, medicalHistory ,contactDetail })
+    //         })
+    //         // addData = await addData.json();
+    //         if (addData.success) alert('Data has been Added')
+    //         return NextResponse.json(addData)
+    //     } catch (error) {
+    //         console.error(error)
+    //     }
+    // }
 
   return (
       <div>
