@@ -13,7 +13,6 @@ export async function POST(req,res) {
                 name, medicalHistory ,contactDetail
             }
         })
-        // console.log(result)
         return NextResponse.json({ result: payload, success: true })
     } catch (error) {
         console.log(error)
