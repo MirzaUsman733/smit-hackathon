@@ -1,25 +1,13 @@
-"use client"
-import { useState } from "react"
+import React from 'react'
 
-const initialState = { name: "", email: "" }
 export default function page() {
-    const [state, setState] = useState(initialState)
-    const handleChange = e => setState(s => ({ ...s, [e.target.name]: e.target.value }))
-
-    const submit = (e) =>{
-        e.preventDefault();
-        let { name, email } = state
-        console.log(name)
-        console.log(email)
-    }
-
   return (
     <div>
-          <div class="modal fade" id="searchModal" tabindex="-1">
-              <div class="modal-dialog modal-fullscreen">
-                  <div class="modal-content" style={{ background: "rgba(9, 30, 62, .7)" }}>
-                      <div class="modal-header border-0">
-                          <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div className="modal fade" id="searchModal" tabindex="-1">
+              <div className="modal-dialog modal-fullscreen">
+                  <div className="modal-content" style={{background: "rgba(9, 30, 62, .7)"}}>
+                      <div className="modal-header border-0">
+                          <button type="button" className="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div className="modal-body d-flex align-items-center justify-content-center">
                           <div className="input-group" style={{maxWidth: 600}}>
@@ -33,69 +21,71 @@ export default function page() {
           <div className="container-fluid bg-primary py-5 hero-header mb-5">
               <div className="row py-3">
                   <div className="col-12 text-center">
-                      <h1 className="display-3 text-white animated zoomIn">Appointment</h1>
+                      <h1 className="display-3 text-white animated zoomIn">Contact Us</h1>
                       <a href="" className="h4 text-white">Home</a>
                       <i className="far fa-circle text-white px-2"></i>
-                      <a href="" className="h4 text-white">Appointment</a>
+                      <a href="" className="h4 text-white">Contact</a>
                   </div>
               </div>
           </div>
-          <div className="container-fluid bg-primary bg-appointment mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{marginTop: "90px"}}>
+          <div className="container-fluid py-5">
               <div className="container">
-                  <div className="row gx-5">
-                      <div className="col-lg-6 py-5">
-                          <div className="py-5">
-                              <h1 className="display-5 text-white mb-4">We Are A Certified and Award Winning Dental Clinic You Can Trust</h1>
-                              <p className="text-white mb-0">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                  <div className="row g-5">
+                      <div className="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.1s">
+                          <div className="bg-light rounded h-100 p-5">
+                              <div className="section-title">
+                                  <h5 className="position-relative d-inline-block text-primary text-uppercase">Contact Us</h5>
+                                  <h1 className="display-6 mb-4">Feel Free To Contact Us</h1>
+                              </div>
+                              <div className="d-flex align-items-center mb-2">
+                                  <i className="bi bi-geo-alt fs-1 text-primary me-3"></i>
+                                  <div className="text-start">
+                                      <h5 className="mb-0">Our Office</h5>
+                                      <span>123 Street, New York, USA</span>
+                                  </div>
+                              </div>
+                              <div className="d-flex align-items-center mb-2">
+                                  <i className="bi bi-envelope-open fs-1 text-primary me-3"></i>
+                                  <div className="text-start">
+                                      <h5 className="mb-0">Email Us</h5>
+                                      <span>info@example.com</span>
+                                  </div>
+                              </div>
+                              <div className="d-flex align-items-center">
+                                  <i className="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
+                                  <div className="text-start">
+                                      <h5 className="mb-0">Call Us</h5>
+                                      <span>+012 345 6789</span>
+                                  </div>
+                              </div>
                           </div>
                       </div>
-                      <div class="col-lg-6">
-                          <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
-                              <h1 class="text-white mb-4">Make Appointment</h1>
-                              <form>
-                                  <div class="row g-3">
-                                      <div class="col-12 col-sm-6">
-                                          <select class="form-select bg-light border-0" style={{height: "55px"}}>
-                                              <option selected>Select A Service</option>
-                                              <option value="1">Service 1</option>
-                                              <option value="2">Service 2</option>
-                                              <option value="3">Service 3</option>
-                                          </select>
-                                      </div>
-                                      <div className="col-12 col-sm-6">
-                                          <select className="form-select bg-light border-0" style={{height: "55px"}}>
-                                              <option selected>Select Doctor</option>
-                                              <option value="1">Doctor 1</option>
-                                              <option value="2">Doctor 2</option>
-                                              <option value="3">Doctor 3</option>
-                                          </select>
-                                      </div>
-                                      <div class="col-12 col-sm-6">
-                                          <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style={{height: "55px"}}/>
-                                      </div>
-                                      <div class="col-12 col-sm-6">
-                                          <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style={{height: 55}}/>
-                                      </div>
-                                      <div className="col-12 col-sm-6">
-                                          <div className="date" id="date1" data-target-input="nearest">
-                                              <input type="text"
-                                                  className="form-control bg-light border-0 datetimepicker-input"
-                                                  placeholder="Appointment Date" data-target="#date1" data-toggle="datetimepicker" style={{height: 55}}/>
-                                          </div>
-                                      </div>
-                                      <div className="col-12 col-sm-6">
-                                          <div className="time" id="time1" data-target-input="nearest">
-                                              <input type="text"
-                                                  className="form-control bg-light border-0 datetimepicker-input"
-                                                  placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style={{height: 55}}/>
-                                          </div>
-                                      </div>
-                                      <div class="col-12">
-                                          <button class="btn btn-dark w-100 py-3" type="submit">Make Appointment</button>
-                                      </div>
+                      <div className="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                          <form>
+                              <div className="row g-3">
+                                  <div className="col-12">
+                                      <input type="text" className="form-control border-0 bg-light px-4" placeholder="Your Name" style={{height: 55}}/>
                                   </div>
-                              </form>
-                          </div>
+                                  <div className="col-12">
+                                      <input type="email" className="form-control border-0 bg-light px-4" placeholder="Your Email" style={{height: 55}}/>
+                                  </div>
+                                  <div className="col-12">
+                                      <input type="text" className="form-control border-0 bg-light px-4" placeholder="Subject" style={{height: 55}}/>
+                                  </div>
+                                  <div className="col-12">
+                                      <textarea className="form-control border-0 bg-light px-4 py-3" rows="5" placeholder="Message"></textarea>
+                                  </div>
+                                  <div className="col-12">
+                                      <button className="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                      <div className="col-xl-4 col-lg-12 wow slideInUp" data-wow-delay="0.6s">
+                          <iframe className="position-relative rounded w-100 h-100"
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                              frameborder="0" style={{minHeight: 400, border:0}} allowfullscreen="" aria-hidden="false"
+                              tabindex="0"></iframe>
                       </div>
                   </div>
               </div>
@@ -160,8 +150,9 @@ export default function page() {
                           <p className="mb-md-0">&copy; <a className="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved.</p>
                       </div>
                       <div className="col-md-6 text-center text-md-end">
-                          <p className="mb-0">Designed by <a className="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a><br />
+                          <p className="mb-0">Designed by <a className="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a><br/>
                               Distributed by <a className="text-white border-bottom" href="https://themewagon.com">ThemeWagon</a>
+
                           </p>
                       </div>
                   </div>
