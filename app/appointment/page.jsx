@@ -5,12 +5,12 @@ export default function page() {
     <div>
           <div class="modal fade" id="searchModal" tabindex="-1">
               <div class="modal-dialog modal-fullscreen">
-                  <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                  <div class="modal-content" style={{ background: "rgba(9, 30, 62, .7)" }}>
                       <div class="modal-header border-0">
                           <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body d-flex align-items-center justify-content-center">
-                          <div class="input-group" style="max-width: 600px;">
+                          <div class="input-group" style={{maxWidth: 600}}>
                               <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword"/>
                                   <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
                           </div>
@@ -43,7 +43,7 @@ export default function page() {
                               <form>
                                   <div class="row g-3">
                                       <div class="col-12 col-sm-6">
-                                          <select class="form-select bg-light border-0" style="height: 55px;">
+                                          <select class="form-select bg-light border-0" style={{height: "55px"}}>
                                               <option selected>Select A Service</option>
                                               <option value="1">Service 1</option>
                                               <option value="2">Service 2</option>
@@ -51,7 +51,7 @@ export default function page() {
                                           </select>
                                       </div>
                                       <div class="col-12 col-sm-6">
-                                          <select class="form-select bg-light border-0" style="height: 55px;">
+                                          <select class="form-select bg-light border-0" style={{height: "55px"}}>
                                               <option selected>Select Doctor</option>
                                               <option value="1">Doctor 1</option>
                                               <option value="2">Doctor 2</option>
@@ -59,23 +59,23 @@ export default function page() {
                                           </select>
                                       </div>
                                       <div class="col-12 col-sm-6">
-                                          <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;"/>
+                                          <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style={{height: "55px"}}/>
                                       </div>
                                       <div class="col-12 col-sm-6">
-                                          <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;"/>
+                                          <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style={{height: 55}}/>
                                       </div>
                                       <div class="col-12 col-sm-6">
                                           <div class="date" id="date1" data-target-input="nearest">
                                               <input type="text"
                                                   class="form-control bg-light border-0 datetimepicker-input"
-                                                  placeholder="Appointment Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;"/>
+                                                  placeholder="Appointment Date" data-target="#date1" data-toggle="datetimepicker" style={{height: 55}}/>
                                           </div>
                                       </div>
                                       <div class="col-12 col-sm-6">
                                           <div class="time" id="time1" data-target-input="nearest">
                                               <input type="text"
                                                   class="form-control bg-light border-0 datetimepicker-input"
-                                                  placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;"/>
+                                                  placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style={{height: 55}}/>
                                           </div>
                                       </div>
                                       <div class="col-12">
@@ -88,10 +88,10 @@ export default function page() {
                   </div>
               </div>
           </div>
-          <div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
+          <div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style={{zIndex: 1}}>
               <div class="container">
                   <div class="bg-primary p-5">
-                      <form class="mx-auto" style="max-width: 600px;">
+                      <form class="mx-auto" style={{maxWidth: 600}}>
                           <div class="input-group">
                               <input type="text" class="form-control border-white p-3" placeholder="Your Email"/>
                                   <button class="btn btn-dark px-4">Sign Up</button>
@@ -100,7 +100,7 @@ export default function page() {
                   </div>
               </div>
           </div>
-          <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px;">
+          <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style={{marginTop: -75}}>
               <div class="container pt-5">
                   <div class="row g-5 pt-4">
                       <div class="col-lg-3 col-md-6">
@@ -141,7 +141,7 @@ export default function page() {
                   </div>
               </div>
           </div>
-          <div class="container-fluid text-light py-4" style="background: #051225;">
+          <div class="container-fluid text-light py-4" style={{background: "#051225"}}>
               <div class="container">
                   <div class="row g-0">
                       <div class="col-md-6 text-center text-md-start">
