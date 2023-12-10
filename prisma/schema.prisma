@@ -13,3 +13,10 @@ model doctor {
   medicalHistory String
   name           String
 }
+
+model patient {
+  id             String @id @default(auto()) @map("_id") @db.ObjectId
+  contactDetail  String
+  medicalHistory String
+  name           String
+}
