@@ -1,15 +1,29 @@
 "use client"
+import { NextResponse } from "next/server"
 import { useState } from "react"
-const initialState = { name: "", email: "" }
+const initialState = { name: "", medicalHistory: "",contactDetail:'' }
 export default function page() {
     const [state, setState] = useState(initialState)
     const handleChange = e => setState(s => ({ ...s, [e.target.name]: e.target.value }))
 
-    const submit = (e) =>{
+    const submit = async (e) =>{
         e.preventDefault();
-        let { name, email } = state
-        console.log(name)
-        console.log(email)
+        let { name, medicalHistory ,contactDetail } = state
+        console.log(name,"->",medicalHistory,"->",contactDetail)
+        try {
+            let addData = await fetch('http://localhost:3000/api/appointment ', {
+                method: 'POST',
+                // headers: {
+                //     'Content-Type': 'application/json'
+                // },
+                body: JSON.stringify({ name, medicalHistory ,contactDetail })
+            })
+            // addData = await addData.json();
+            if (addData.success) alert('Data has been Added')
+            return NextResponse.json(addData)
+        } catch (error) {
+            console.error(error)
+        }
     }
 
   return (
@@ -110,7 +124,7 @@ export default function page() {
                               <h1 className="text-white mb-4">Make Appointment</h1>
                               <form>
                                   <div className="row g-3">
-                                      <div className="col-12 col-sm-6">
+                                      {/* <div className="col-12 col-sm-6">
                                           <select className="form-select bg-light border-0" style={{height: "55px"}}>
                                               <option selected>Select A Service</option>
                                               <option value="1">Service 1</option>
@@ -125,27 +139,27 @@ export default function page() {
                                               <option value="2">Doctor 2</option>
                                               <option value="3">Doctor 3</option>
                                           </select>
-                                      </div>
+                                      </div> */}
                                       <div className="col-12 col-sm-6">
                                           <input type="text" className="form-control bg-light border-0" name="name" onChange={handleChange} placeholder="Your Name" style={{height: "55px"}}/>
                                       </div>
                                       <div className="col-12 col-sm-6">
-                                          <input type="email" className="form-control bg-light border-0" name="email  " onChange={handleChange} placeholder="Your Email" style={{height: 55}}/>
+                                          <input type="email" className="form-control bg-light border-0" name="medicalHistory" onChange={handleChange} placeholder="Your Medical History" style={{height: 55}}/>
                                       </div>
                                       <div className="col-12 col-sm-6">
                                           <div className="date" id="date1" data-target-input="nearest">
                                               <input type="text"
-                                                  className="form-control bg-light border-0 datetimepicker-input"
-                                                  placeholder="Appointment Date" data-target="#date1" data-toggle="datetimepicker" style={{height: 55}}/>
+                                                  className="form-control bg-light border-0 datetimepicker-input" name="contactDetail" onChange={handleChange}
+                                                  placeholder="Your Contact Detail" style={{height: 55}}/>
                                           </div>
                                       </div>
-                                      <div className="col-12 col-sm-6">
+                                      {/* <div className="col-12 col-sm-6">
                                           <div className="time" id="time1" data-target-input="nearest">
                                               <input type="text"
                                                   className="form-control bg-light border-0 datetimepicker-input"
                                                   placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style={{height: 55}}/>
                                           </div>
-                                      </div>
+                                      </div> */}
                                       <div className="col-12">
                                           <button className="btn btn-dark w-100 py-3" onClick={submit} type="submit">Make Appointment</button>
                                       </div>
