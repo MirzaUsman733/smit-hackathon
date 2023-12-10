@@ -8,12 +8,12 @@ export async function POST(req,res) {
         const {name, medicalHistory ,contactDetail} = payload
         // console.log(name)
         // console.log(email)
-        const result = await prisma.patient.create({
+        await prisma.patient.create({
             data:{
                 name, medicalHistory ,contactDetail
             }
         })
-        console.log(result)
+        // console.log(result)
         return NextResponse.json({ result: payload, success: true })
     } catch (error) {
         console.log(error)
