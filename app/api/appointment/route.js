@@ -20,6 +20,8 @@ export async function POST(req,res) {
     }
 }
 
+
+
 export async function GET() {
     let data = [];
     try {
