@@ -1,0 +1,38 @@
+/* Base class */
+.badge {
+  display: inline-block;
+  padding:
+    /* Replace with actual values */
+    5px 10px;
+  font-size:
+    /* Replace with actual value */
+    14px;
+  font-weight:
+    /* Replace with actual value */
+    bold;
+  line-height: 1;
+  color:
+    /* Replace with actual color value */
+    #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius:
+    /* Replace with actual value */
+    4px;
+  /* Add gradient background styles if needed */
+  background:
+    /* Replace with actual gradient styles */
+    linear-gradient(to right, #ff8a00, #e52e71);
+}
+
+/* Empty badges collapse automatically */
+.badge:empty {
+  display: none;
+}
+
+/* Quick fix for badges in buttons */
+.btn .badge {
+  position: relative;
+  top: -1px;
+}

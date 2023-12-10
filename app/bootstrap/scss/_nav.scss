@@ -1,0 +1,104 @@
+/* Base class */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: var(--nav-link-padding-y) var(--nav-link-padding-x);
+  font-size: var(--nav-link-font-size);
+  font-weight: var(--nav-link-font-weight);
+  color: var(--nav-link-color);
+  text-decoration: var(--link-decoration);
+  transition: var(--nav-link-transition);
+
+  &:hover,
+  &:focus {
+    color: var(--nav-link-hover-color);
+    text-decoration: var(--link-hover-decoration);
+  }
+
+  &.disabled {
+    color: var(--nav-link-disabled-color);
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+/* Tabs */
+.nav-tabs {
+  border-bottom: var(--nav-tabs-border-width) solid var(--nav-tabs-border-color);
+
+  .nav-link {
+    margin-bottom: -var(--nav-tabs-border-width);
+    background: none;
+    border: var(--nav-tabs-border-width) solid transparent;
+    border-top-left-radius: var(--nav-tabs-border-radius);
+
+    &:hover,
+    &:focus {
+      border-color: var(--nav-tabs-link-hover-border-color);
+      isolation: isolate;
+    }
+
+    &.disabled {
+      color: var(--nav-link-disabled-color);
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: var(--nav-tabs-link-active-color);
+    background-color: var(--nav-tabs-link-active-bg);
+    border-color: var(--nav-tabs-link-active-border-color);
+  }
+
+  .dropdown-menu {
+    margin-top: -var(--nav-tabs-border-width);
+    border-top-left-radius: 0;
+  }
+}
+
+/* Pills */
+.nav-pills {
+  .nav-link {
+    background: none;
+    border: 0;
+    border-radius: var(--nav-pills-border-radius);
+  }
+
+  .nav-link.active,
+  .show>.nav-link {
+    color: var(--nav-pills-link-active-color);
+    background: var(--nav-pills-link-active-bg);
+  }
+}
+
+/* Justified variants */
+.nav-fill>.nav-link,
+.nav-fill .nav-item,
+.nav-justified>.nav-link,
+.nav-justified .nav-item {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.nav-fill .nav-item .nav-link,
+.nav-justified .nav-item .nav-link {
+  width: 100%;
+}
+
+/* Tabbable tabs */
+.tab-content>.tab-pane {
+  display: none;
+}
+
+.tab-content>.active {
+  display: block;
+}

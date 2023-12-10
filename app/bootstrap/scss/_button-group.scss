@@ -1,0 +1,117 @@
+/* Make the div behave like a button */
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.btn-group>.btn {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+.btn-group>.btn-check:checked+.btn,
+.btn-group>.btn-check:focus+.btn,
+.btn-group>.btn:hover,
+.btn-group>.btn:focus,
+.btn-group>.btn:active,
+.btn-group>.btn.active {
+  z-index: 1;
+}
+
+/* Optional: Group multiple button groups together for a toolbar */
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.btn-toolbar .input-group {
+  width: auto;
+}
+
+.btn-group>.btn:not(:first-child),
+.btn-group:not(:first-child)>.btn {
+  margin-left: -1px;
+  /* Assuming $btn-border-width is 1px */
+}
+
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle),
+.btn-group:not(:last-child)>.btn {
+  border-end-radius: 0;
+}
+
+.btn-group>.btn:nth-child(n + 3),
+.btn-group:not(:first-child)>.btn {
+  border-start-radius: 0;
+}
+
+/* Sizing */
+.btn-group-sm>.btn {
+  /* Apply the styles of .btn-sm */
+}
+
+.btn-group-lg>.btn {
+  /* Apply the styles of .btn-lg */
+}
+
+/* Split button dropdowns */
+.dropdown-toggle-split {
+  padding-right: 9px;
+  /* Assuming $btn-padding-x is 12px */
+  padding-left: 9px;
+  /* Assuming $btn-padding-x is 12px */
+}
+
+.btn-sm+.dropdown-toggle-split {
+  padding-right: 6.75px;
+  /* Assuming $btn-padding-x-sm is 9px */
+  padding-left: 6.75px;
+  /* Assuming $btn-padding-x-sm is 9px */
+}
+
+.btn-lg+.dropdown-toggle-split {
+  padding-right: 15px;
+  /* Assuming $btn-padding-x-lg is 18px */
+  padding-left: 15px;
+  /* Assuming $btn-padding-x-lg is 18px */
+}
+
+/* Clickable button for toggling the menu */
+.btn-group.show .dropdown-toggle {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  /* Applying $btn-active-box-shadow */
+}
+
+.btn-group.show .dropdown-toggle.btn-link {
+  box-shadow: none;
+}
+
+/* Vertical button groups */
+.btn-group-vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.btn-group-vertical>.btn,
+.btn-group-vertical>.btn-group {
+  width: 100%;
+}
+
+.btn-group-vertical>.btn:not(:first-child),
+.btn-group-vertical:not(:first-child)>.btn {
+  margin-top: -1px;
+  /* Assuming $btn-border-width is 1px */
+}
+
+.btn-group-vertical>.btn:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical:not(:last-child)>.btn {
+  border-bottom-radius: 0;
+}
+
+.btn-group-vertical>.btn~.btn,
+.btn-group-vertical:not(:first-child)>.btn {
+  border-top-radius: 0;
+}
