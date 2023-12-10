@@ -1,9 +1,21 @@
-import React from 'react'
+"use client"
+import { useState } from "react"
 
+const initialState = { name: "", email: "" }
 export default function page() {
+    const [state, setState] = useState(initialState)
+    const handleChange = e => setState(s => ({ ...s, [e.target.name]: e.target.value }))
+
+    const submit = (e) =>{
+        e.preventDefault();
+        let { name, email } = state
+        console.log(name)
+        console.log(email)
+    }
+
   return (
     <div>
-          <div className="modal fade" id="searchModal" tabindex="-1">
+          <div className="modal fade" id="searchModal" tabIndex="-1">
               <div className="modal-dialog modal-fullscreen">
                   <div className="modal-content" style={{ background: "rgba(9, 30, 62, .7)" }}>
                       <div className="modal-header border-0">
