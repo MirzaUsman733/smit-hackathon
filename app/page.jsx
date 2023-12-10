@@ -28,9 +28,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-       <Navbar />
-        
-      <Caurosel />
+        <Navbar />
+
+        <Caurosel />
       </div>
       <div className="container-fluid banner mb-5">
         <div className="container">
@@ -85,7 +85,7 @@ export default function Home() {
             <div className="col-lg-7">
               <div className="section-title mb-4">
                 <h5 className="position-relative d-inline-block text-primary text-uppercase">About Us</h5>
-                <h1 className="display-5 mb-0">The World's Best Dental Clinic That You Can Trust</h1>
+                <h1 className="display-5 mb-0">The World Best Dental Clinic That You Can Trust</h1>
               </div>
               <h4 className="text-body fst-italic mb-4">Diam dolor diam ipsum sit. Clita erat ipsum et lorem stet no lorem sit clita duo justo magna dolore</h4>
               <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
@@ -474,7 +474,7 @@ export default function Home() {
             </div>
             <div className="col-lg-3 col-md-6">
               <h3 className="text-white mb-4">Get In Touch</h3>
-              <p className="mb-2"><i className="bi bi-geo-alt text-primary me-2"></i>123 Street, New York, USA</p>
+              <p className="mb-2"><i className="bi bi-geo-alt text-primary me-2"></i>123 Street&lsquo; New York&lsquo; USA</p>
               <p className="mb-2"><i className="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
               <p className="mb-0"><i className="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
             </div>
