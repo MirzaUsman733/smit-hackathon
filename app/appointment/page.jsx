@@ -127,10 +127,10 @@ export default function page() {
                                           </select>
                                       </div>
                                       <div className="col-12 col-sm-6">
-                                          <input type="text" className="form-control bg-light border-0" placeholder="Your Name" style={{height: "55px"}}/>
+                                          <input type="text" className="form-control bg-light border-0" name="name" onChange={handleChange} placeholder="Your Name" style={{height: "55px"}}/>
                                       </div>
                                       <div className="col-12 col-sm-6">
-                                          <input type="email" className="form-control bg-light border-0" placeholder="Your Email" style={{height: 55}}/>
+                                          <input type="email" className="form-control bg-light border-0" name="email  " onChange={handleChange} placeholder="Your Email" style={{height: 55}}/>
                                       </div>
                                       <div className="col-12 col-sm-6">
                                           <div className="date" id="date1" data-target-input="nearest">
@@ -147,7 +147,7 @@ export default function page() {
                                           </div>
                                       </div>
                                       <div className="col-12">
-                                          <button className="btn btn-dark w-100 py-3" type="submit">Make Appointment</button>
+                                          <button className="btn btn-dark w-100 py-3" onClick={submit} type="submit">Make Appointment</button>
                                       </div>
                                   </div>
                               </form>
