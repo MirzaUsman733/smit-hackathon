@@ -29,7 +29,6 @@ export default function Home() {
           </div>
         </div>
         <Navbar />
-
         <Caurosel />
       </div>
       <div className="container-fluid banner mb-5">
