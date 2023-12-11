@@ -30,7 +30,7 @@ export default function Navbar() {
               </div>
               <Link href="/contact" className="nav-item nav-link">Contact</Link>
             </div>
-            <button type="button" className="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fa fa-search"></i></button>
+          {/* <button type="button" className="btn text-dark" data-bs-toggle="modal" role="button" data-fdprocessedid="your-value" data-bs-target="#searchModal"><i className="fa fa-search"></i></button> */}
             <Link href="/appointment" className="btn btn-primary py-2 px-4 ms-3">Appointment</Link>
           </div>
           </nav>

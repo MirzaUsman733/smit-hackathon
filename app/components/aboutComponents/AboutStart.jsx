@@ -30,7 +30,7 @@ export default function AboutStart() {
                         </div>
                         <div className="col-lg-5" style={{ minHeight: 500 }}>
                             <div className="position-relative h-100">
-                                <Image className="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src={img} style={{ objectFit: "cover" }} />
+                                <Image className="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src={img} style={{ objectFit: "cover" }} alt='about' />
                             </div>
                         </div>
                     </div>

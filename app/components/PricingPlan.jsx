@@ -42,7 +42,7 @@ export default function PricingPlan() {
                             <div className="owl-carousel price-carousel wow zoomIn" data-wow-delay="0.9s">
                                 <div className="price-item pb-4">
                                     <div className="position-relative">
-                                        <Image className="img-fluid rounded-top" src={image1} alt="" />
+                                        <Image className="img-fluid rounded-top" src={image1} alt="price" />
                                         <div className="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle" style={{zIndex: 2}}>
                                             <h2 className="text-primary m-0">$35</h2>
                                         </div>
@@ -58,7 +58,7 @@ export default function PricingPlan() {
                                 </div>
                                 <div className="price-item pb-4">
                                     <div className="position-relative">
-                                        <Image className="img-fluid rounded-top" src={image2} alt="" />
+                                        <Image className="img-fluid rounded-top" src={image2} alt="price" />
                                         <div className="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle" style={{zIndex: 2}}>
                                             <h2 className="text-primary m-0">$49</h2>
                                         </div>
@@ -74,7 +74,7 @@ export default function PricingPlan() {
                                 </div>
                                 <div className="price-item pb-4">
                                     <div className="position-relative">
-                                        <Image className="img-fluid rounded-top" src={image3} alt="" />
+                                        <Image className="img-fluid rounded-top" src={image3} alt="price" />
                                         <div className="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle" style={{zIndex: 2}}>
                                             <h2 className="text-primary m-0">$99</h2>
                                         </div>

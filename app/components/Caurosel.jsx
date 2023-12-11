@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React, { useEffect } from 'react'
 import img1 from '@/public/img/carousel-1.jpg'
 import img2 from '@/public/img/carousel-2.jpg'
+import Image from 'next/image'
 export default function Caurosel() {
     useEffect(() => {
         import('bootstrap/dist/js/bootstrap.bundle.min.js');
@@ -13,7 +14,7 @@ export default function Caurosel() {
                 <div id="header-carousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img className="w-100" src={img1} alt="courosel" />
+                            <Image className="w-100" src={img1} alt="courosel" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div className="p-3" style={{ maxWidth: 900 }}>
                                     <h5 className="text-white text-uppercase mb-3 animated slideInDown">Keep Your Teeth Healthy</h5>
@@ -24,7 +25,7 @@ export default function Caurosel() {
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img className="w-100" src={img2} alt="courosel" />
+                            <Image className="w-100" src={img2} alt="courosel" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div className="p-3" style={{ maxWidth: 900 }}>
                                     <h5 className="text-white text-uppercase mb-3 animated slideInDown">Keep Your Teeth Healthy</h5>
@@ -35,7 +36,7 @@ export default function Caurosel() {
                             </div>
                         </div>
                     </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                    {/* <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel"
                         data-bs-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Previous</span>
@@ -44,7 +45,9 @@ export default function Caurosel() {
                         data-bs-slide="next">
                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Next</span>
-                    </button>
+                    </button> */}
+
+
                 </div>
             </div>
         </div>
