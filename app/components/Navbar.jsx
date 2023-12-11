@@ -16,11 +16,11 @@ export default function Navbar() {
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-              <a href="/" class="nav-item nav-link active">Home</a>
-              <a href="about" class="nav-item nav-link">About</a>
-              <a href="service" class="nav-item nav-link">Service</a>
+              <Link href="/" class="nav-item nav-link active">Home</Link>
+              <Link href="about" class="nav-item nav-link">About</Link>
+              <Link href="service" class="nav-item nav-link">Service</Link>
               <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <a href="/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="dropdown-menu m-0">
                   <Link href="/price" class="dropdown-item">Pricing Plan</Link>
                   <Link href="/team" class="dropdown-item">Our Dentist</Link>

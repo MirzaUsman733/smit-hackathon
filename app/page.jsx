@@ -1,6 +1,17 @@
 
+import Link from 'next/link';
 import Caurosel from './components/Caurosel';
 import Navbar from './components/Navbar';
+import Image from 'next/image';
+import HomeTestimonology from './components/HomeTestimonology';
+import imageBefore from '../public/img/before.jpg'
+import imageAfter from '../public/img/after.jpg'
+import team1 from '../public/img/team-1.jpg'
+import team2 from '../public/img/team-2.jpg'
+import team3 from '../public/img/team-3.jpg'
+import team4 from '../public/img/team-4.jpg'
+import team5 from '../public/img/team-5.jpg'
+import PricingPlan from './components/PricingPlan';
 //  import('bootstrap/dist/js/bootstrap.bundle.min.js');
 export default function Home() {
   // useEffect(() => {
@@ -49,7 +60,7 @@ export default function Home() {
                   <h6 className="text-white mb-0">Sunday</h6>
                   <p className="mb-0"> 8:00am - 5:00pm</p>
                 </div>
-                <a className="btn btn-light" href="">Appointment</a>
+                <a className="btn btn-light" href="/">Appointment</a>
               </div>
             </div>
             <div className="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
@@ -65,7 +76,7 @@ export default function Home() {
                   <option value="2">Service 2</option>
                   <option value="3">Service 3</option>
                 </select>
-                <a className="btn btn-light" href="">Search Doctor</a>
+                <a className="btn btn-light" href="/">Search Doctor</a>
               </div>
             </div>
             <div className="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
@@ -98,7 +109,7 @@ export default function Home() {
                   <h5 className="mb-3"><i className="fa fa-check-circle text-primary me-3"></i>Fair Prices</h5>
                 </div>
               </div>
-              <a href="appointment.html" className="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">Make Appointment</a>
+              <Link href="appointment" className="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">Make Appointment</Link>
             </div>
             <div className="col-lg-5" style={{ minHeight: 500 }}>
               <div className="position-relative h-100">
@@ -173,8 +184,8 @@ export default function Home() {
           <div className="row g-5 mb-5">
             <div className="col-lg-5 wow zoomIn" data-wow-delay="0.3s" style={{ minHeight: 400 }}>
               <div className="twentytwenty-container position-relative h-100 rounded overflow-hidden">
-                <img className="position-absolute w-100 h-100" src="img/before.jpg" style={{ objectFit: 'cover' }} />
-                <img className="position-absolute w-100 h-100" src="img/after.jpg" style={{ objectFit: "cover" }} />
+                <Image className="position-absolute w-100 h-100" src={imageBefore} width={100} height={100} style={{ objectFit: 'cover' }} />
+                <Image className="position-absolute w-100 h-100" src={imageAfter} width={100} height={100} style={{ objectFit: "cover" }} />
               </div>
             </div>
             <div className="col-lg-7">
@@ -240,104 +251,15 @@ export default function Home() {
               <div className="offer-text text-center rounded p-5">
                 <h1 className="display-5 text-white">Save 30% On Your First Dental Checkup</h1>
                 <p className="text-white mb-4">Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et dolore et at sea ea at dolor justo ipsum duo rebum sea. Eos vero eos vero ea et dolore eirmod diam duo lorem magna sit dolore sed et.</p>
-                <a href="appointment.html" className="btn btn-dark py-3 px-5 me-3">Appointment</a>
-                <a href="" className="btn btn-light py-3 px-5">Read More</a>
+                <a href="appointment" className="btn btn-dark py-3 px-5 me-3">Appointment</a>
+                <a href="/" className="btn btn-light py-3 px-5">Read More</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* <div className="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div className="container">
-          <div className="row g-5">
-            <div className="col-lg-5">
-              <div className="section-title mb-4">
-                <h5 className="position-relative d-inline-block text-primary text-uppercase">Pricing Plan</h5>
-                <h1 className="display-5 mb-0">We Offer Fair Prices for Dental Treatment</h1>
-              </div>
-              <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo eirmod magna dolore erat amet</p>
-              <h5 className="text-uppercase text-primary wow fadeInUp" data-wow-delay="0.3s">Call for Appointment</h5>
-              <h1 className="wow fadeInUp" data-wow-delay="0.6s">+012 345 6789</h1>
-            </div>
-            <div className="col-lg-7">
-              <div className="owl-carousel price-carousel wow zoomIn" data-wow-delay="0.9s">
-                <div className="price-item pb-4">
-                  <div className="position-relative">
-                    <img className="img-fluid rounded-top" src="img/price-1.jpg" alt="" />
-                    <div className="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle" style={{ zIndex: 2 }}>
-                      <h2 className="text-primary m-0">$35</h2>
-                    </div>
-                  </div>
-                  <div className="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                    <h4>Teeth Whitening</h4>
-                    <hr className="text-primary w-50 mx-auto mt-0" />
-                    <div className="d-flex justify-content-between mb-3"><span>Modern Equipment</span><i className="fa fa-check text-primary pt-1"></i></div>
-                    <div className="d-flex justify-content-between mb-3"><span>Professional Dentist</span><i className="fa fa-check text-primary pt-1"></i></div>
-                    <div className="d-flex justify-content-between mb-2"><span>24/7 Call Support</span><i className="fa fa-check text-primary pt-1"></i></div>
-                    <a href="appointment.html" className="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Appointment</a>
-                  </div>
-                </div>
-                <div className="price-item pb-4">
-                  <div className="position-relative">
-                    <img className="img-fluid rounded-top" src="img/price-2.jpg" alt="" />
-                    <div className="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle" style={{ zIndex: 2 }}>
-                      <h2 className="text-primary m-0">$49</h2>
-                    </div>
-                  </div>
-                  <div className="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                    <h4>Dental Implant</h4>
-                    <hr className="text-primary w-50 mx-auto mt-0" />
-                    <div className="d-flex justify-content-between mb-3"><span>Modern Equipment</span><i className="fa fa-check text-primary pt-1"></i></div>
-                    <div className="d-flex justify-content-between mb-3"><span>Professional Dentist</span><i className="fa fa-check text-primary pt-1"></i></div>
-                    <div className="d-flex justify-content-between mb-2"><span>24/7 Call Support</span><i className="fa fa-check text-primary pt-1"></i></div>
-                    <a href="appointment.html" className="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Appointment</a>
-                  </div>
-                </div>
-                <div className="price-item pb-4">
-                  <div className="position-relative">
-                    <img className="img-fluid rounded-top" src="img/price-3.jpg" alt="" />
-                    <div className="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle" style={{ zIndex: 2 }}>
-                      <h2 className="text-primary m-0">$99</h2>
-                    </div>
-                  </div>
-                  <div className="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                    <h4>Root Canal</h4>
-                    <hr className="text-primary w-50 mx-auto mt-0" />
-                    <div className="d-flex justify-content-between mb-3"><span>Modern Equipment</span><i className="fa fa-check text-primary pt-1"></i></div>
-                    <div className="d-flex justify-content-between mb-3"><span>Professional Dentist</span><i className="fa fa-check text-primary pt-1"></i></div>
-                    <div className="d-flex justify-content-between mb-2"><span>24/7 Call Support</span><i className="fa fa-check text-primary pt-1"></i></div>
-                    <a href="appointment.html" className="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Appointment</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-       */}
-      <div className="container-fluid bg-primary bg-testimonial py-5 my-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div className="container py-5">
-          <div className="row justify-content-center">
-            <div className="col-lg-7">
-              <div className="owl-carousel testimonial-carousel rounded p-5 wow zoomIn" data-wow-delay="0.6s">
-                <div className="testimonial-item text-center text-white">
-                  <img className="img-fluid mx-auto rounded mb-4" src="img/testimonial-1.jpg" alt="" />
-                  <p className="fs-5">Dolores sed duo clita justo dolor et stet lorem kasd dolore lorem ipsum. At lorem lorem magna ut et, nonumy labore diam erat. Erat dolor rebum sit ipsum.</p>
-                  <hr className="mx-auto w-25" />
-                  <h4 className="text-white mb-0">Client Name</h4>
-                </div>
-                <div className="testimonial-item text-center text-white">
-                  <img className="img-fluid mx-auto rounded mb-4" src="img/testimonial-2.jpg" alt="" />
-                  <p className="fs-5">Dolores sed duo clita justo dolor et stet lorem kasd dolore lorem ipsum. At lorem lorem magna ut et, nonumy labore diam erat. Erat dolor rebum sit ipsum.</p>
-                  <hr className="mx-auto w-25" />
-                  <h4 className="text-white mb-0">Client Name</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* <PricingPlan/>
+      <HomeTestimonology/> */}
       <div className="container-fluid py-5">
         <div className="container">
           <div className="row g-5">
@@ -345,18 +267,18 @@ export default function Home() {
               <div className="section-title bg-light rounded h-100 p-5">
                 <h5 className="position-relative d-inline-block text-primary text-uppercase">Our Dentist</h5>
                 <h1 className="display-6 mb-4">Meet Our Certified & Experienced Dentist</h1>
-                <a href="appointment.html" className="btn btn-primary py-3 px-5">Appointment</a>
+                <a href="appointment" className="btn btn-primary py-3 px-5">Appointment</a>
               </div>
             </div>
             <div className="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
               <div className="team-item">
                 <div className="position-relative rounded-top" style={{ zIndex: 1 }}>
-                  <img className="img-fluid rounded-top w-100" src="img/team-1.jpg" alt="" />
+                  <Image className="img-fluid rounded-top w-100" src={team1} width={100} alt="" />
                   <div className="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-twitter fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-facebook-f fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-linkedin-in fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-instagram fw-normal"></i></a>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-linkedin-in fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-instagram fw-normal"></i></Link>
                   </div>
                 </div>
                 <div className="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
@@ -368,12 +290,12 @@ export default function Home() {
             <div className="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
               <div className="team-item">
                 <div className="position-relative rounded-top" style={{ zIndex: 1 }}>
-                  <img className="img-fluid rounded-top w-100" src="img/team-2.jpg" alt="" />
+                  <Image className="img-fluid rounded-top w-100" src={team2} alt="" />
                   <div className="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-twitter fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-facebook-f fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-linkedin-in fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-instagram fw-normal"></i></a>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-linkedin-in fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-instagram fw-normal"></i></Link>
                   </div>
                 </div>
                 <div className="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
@@ -385,12 +307,12 @@ export default function Home() {
             <div className="col-lg-4 wow slideInUp" data-wow-delay="0.1s">
               <div className="team-item">
                 <div className="position-relative rounded-top" style={{ zIndex: 1 }}>
-                  <img className="img-fluid rounded-top w-100" src="img/team-3.jpg" alt="" />
+                  <Image className="img-fluid rounded-top w-100" src={team3} width={100} alt="" />
                   <div className="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-twitter fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-facebook-f fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-linkedin-in fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-instagram fw-normal"></i></a>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-linkedin-in fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-instagram fw-normal"></i></Link>
                   </div>
                 </div>
                 <div className="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
@@ -402,12 +324,12 @@ export default function Home() {
             <div className="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
               <div className="team-item">
                 <div className="position-relative rounded-top" style={{ zIndex: 1 }}>
-                  <img className="img-fluid rounded-top w-100" src="img/team-4.jpg" alt="" />
+                  <Image className="img-fluid rounded-top w-100" src={team4} width={100} alt="" />
                   <div className="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-twitter fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-facebook-f fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-linkedin-in fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-instagram fw-normal"></i></a>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-linkedin-in fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-instagram fw-normal"></i></Link>
                   </div>
                 </div>
                 <div className="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
@@ -419,12 +341,12 @@ export default function Home() {
             <div className="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
               <div className="team-item">
                 <div className="position-relative rounded-top" style={{ zIndex: 1 }}>
-                  <img className="img-fluid rounded-top w-100" src="img/team-5.jpg" alt="" />
+                  <Image className="img-fluid rounded-top w-100" src={team5} alt="" />
                   <div className="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-twitter fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-facebook-f fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-linkedin-in fw-normal"></i></a>
-                    <a className="btn btn-primary btn-square m-1" href="#"><i className="fab fa-instagram fw-normal"></i></a>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-linkedin-in fw-normal"></i></Link>
+                    <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-instagram fw-normal"></i></Link>
                   </div>
                 </div>
                 <div className="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
@@ -454,21 +376,21 @@ export default function Home() {
             <div className="col-lg-3 col-md-6">
               <h3 className="text-white mb-4">Quick Links</h3>
               <div className="d-flex flex-column justify-content-start">
-                <a className="text-light mb-2" href="#"><i className="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                <a className="text-light mb-2" href="#"><i className="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                <a className="text-light mb-2" href="#"><i className="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                <a className="text-light mb-2" href="#"><i className="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                <a className="text-light" href="#"><i className="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Home</Link>
+                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>About Us</Link>
+                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Our Services</Link>
+                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Latest Blog</Link>
+                <Link className="text-light" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Contact Us</Link>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
               <h3 className="text-white mb-4">Popular Links</h3>
               <div className="d-flex flex-column justify-content-start">
-                <a className="text-light mb-2" href="#"><i className="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                <a className="text-light mb-2" href="#"><i className="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                <a className="text-light mb-2" href="#"><i className="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                <a className="text-light mb-2" href="#"><i className="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                <a className="text-light" href="#"><i className="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Home</Link>
+                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>About Us</Link>
+                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Our Services</Link>
+                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Latest Blog</Link>
+                <Link className="text-light" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Contact Us</Link>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
@@ -480,10 +402,10 @@ export default function Home() {
             <div className="col-lg-3 col-md-6">
               <h3 className="text-white mb-4">Follow Us</h3>
               <div className="d-flex">
-                <a className="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i className="fab fa-twitter fw-normal"></i></a>
-                <a className="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i className="fab fa-facebook-f fw-normal"></i></a>
-                <a className="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i className="fab fa-linkedin-in fw-normal"></i></a>
-                <a className="btn btn-lg btn-primary btn-lg-square rounded" href="#"><i className="fab fa-instagram fw-normal"></i></a>
+                <Link className="btn btn-lg btn-primary btn-lg-square rounded me-2" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
+                <Link className="btn btn-lg btn-primary btn-lg-square rounded me-2" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
+                <Link className="btn btn-lg btn-primary btn-lg-square rounded me-2" href="/"><i className="fab fa-linkedin-in fw-normal"></i></Link>
+                <Link className="btn btn-lg btn-primary btn-lg-square rounded" href="/"><i className="fab fa-instagram fw-normal"></i></Link>
               </div>
             </div>
           </div>
@@ -493,11 +415,11 @@ export default function Home() {
         <div className="container">
           <div className="row g-0">
             <div className="col-md-6 text-center text-md-start">
-              <p className="mb-md-0">&copy; <a className="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved.</p>
+              <p className="mb-md-0">&copy; <a className="text-white border-bottom" href="/">mirzausman.net</a>. All Rights Reserved.</p>
             </div>
             <div className="col-md-6 text-center text-md-end">
-              <p className="mb-0">Designed by <a className="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a><br />
-                Distributed by <a className="text-white border-bottom" href="https://themewagon.com">ThemeWagon</a>
+              <p className="mb-0">Designed by <a className="text-white border-bottom" href="https://htmlcodex.com">Muhammad Usman</a><br />
+                Distributed by <a className="text-white border-bottom" href="https://themewagon.com">Mirza Usman</a>
               </p>
             </div>
           </div>
