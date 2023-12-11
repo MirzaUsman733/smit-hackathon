@@ -36,7 +36,7 @@ export default function Caurosel() {
                             </div>
                         </div>
                     </div>
-                    {/* <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                    <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel"
                         data-bs-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Previous</span>
@@ -45,7 +45,7 @@ export default function Caurosel() {
                         data-bs-slide="next">
                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Next</span>
-                    </button> */}
+                    </button>
 
 
                 </div>
