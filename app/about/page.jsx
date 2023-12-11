@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Topbar from '../components/Topbar'
 import HeroStart from '../components/aboutComponents/HeroStart'
 import AboutStart from '../components/aboutComponents/AboutStart'
+import NewsLetterStart from '../components/aboutComponents/NewsLetterStart'
 
 export default function page() {
     return (
@@ -10,7 +11,8 @@ export default function page() {
             <Topbar />
             <Navbar />
             <HeroStart />
-            <AboutStart/>
+            <AboutStart />
+            <NewsLetterStart />
         </div>
     )
 }

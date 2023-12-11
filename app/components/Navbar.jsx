@@ -7,34 +7,34 @@ export default function Navbar() {
     }, []);
   return (
     <div>
-       <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-          <a href="index.html" class="navbar-brand p-0">
-            <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>DentCare</h1>
+       <nav className="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+          <a href="index.html" className="navbar-brand p-0">
+            <h1 className="m-0 text-primary"><i className="fa fa-tooth me-2"></i>DentCare</h1>
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0">
-              <Link href="/" class="nav-item nav-link active">Home</Link>
-              <Link href="about" class="nav-item nav-link">About</Link>
-              <Link href="service" class="nav-item nav-link">Service</Link>
-              <div class="nav-item dropdown">
-                <a href="/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                <div class="dropdown-menu m-0">
-                  <Link href="/price" class="dropdown-item">Pricing Plan</Link>
-                  <Link href="/team" class="dropdown-item">Our Dentist</Link>
-                  <Link href="/testimonology" class="dropdown-item">Testimonial</Link>
-                  <Link href="/appointment" class="dropdown-item">Appointment</Link>
+          <div className="collapse navbar-collapse" id="navbarCollapse">
+            <div className="navbar-nav ms-auto py-0">
+              <Link href="/" className="nav-item nav-link active">Home</Link>
+              <Link href="about" className="nav-item nav-link">About</Link>
+              <Link href="service" className="nav-item nav-link">Service</Link>
+              <div className="nav-item dropdown">
+                <a href="/" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div className="dropdown-menu m-0">
+                  <Link href="/price" className="dropdown-item">Pricing Plan</Link>
+                  <Link href="/team" className="dropdown-item">Our Dentist</Link>
+                  <Link href="/testimonology" className="dropdown-item">Testimonial</Link>
+                  <Link href="/appointment" className="dropdown-item">Appointment</Link>
                 </div>
               </div>
-              <Link href="/contact" class="nav-item nav-link">Contact</Link>
+              <Link href="/contact" className="nav-item nav-link">Contact</Link>
             </div>
-            <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <Link href="/appointment" class="btn btn-primary py-2 px-4 ms-3">Appointment</Link>
+            <button type="button" className="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fa fa-search"></i></button>
+            <Link href="/appointment" className="btn btn-primary py-2 px-4 ms-3">Appointment</Link>
           </div>
           </nav>
-          <div className="modal fade" id="searchModal" tabindex="-1">
+          <div className="modal fade" id="searchModal" tabIndex="-1">
               <div className="modal-dialog modal-fullscreen">
                   <div className="modal-content" style={{ background: "rgba(9, 30, 62, .7);" }}>
                       <div className="modal-header border-0">

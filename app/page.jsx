@@ -11,7 +11,7 @@ import team2 from '../public/img/team-2.jpg'
 import team3 from '../public/img/team-3.jpg'
 import team4 from '../public/img/team-4.jpg'
 import team5 from '../public/img/team-5.jpg'
-import PricingPlan from './components/PricingPlan';
+import Footer from './components/Footer';
 //  import('bootstrap/dist/js/bootstrap.bundle.min.js');
 export default function Home() {
   // useEffect(() => {
@@ -20,20 +20,20 @@ export default function Home() {
   return (
     <>
       <div>
-        <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
-          <div class="row gx-0">
-            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-              <div class="d-inline-flex align-items-center">
-                <small class="py-2"><i class="far fa-clock text-primary me-2"></i>Opening Hours: Mon - Tues : 6.00 am - 10.00 pm, Sunday Closed </small>
+        <div className="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
+          <div className="row gx-0">
+            <div className="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+              <div className="d-inline-flex align-items-center">
+                <small className="py-2"><i className="far fa-clock text-primary me-2"></i>Opening Hours: Mon - Tues : 6.00 am - 10.00 pm, Sunday Closed </small>
               </div>
             </div>
-            <div class="col-md-6 text-center text-lg-end">
-              <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
-                <div class="me-3 pe-3 border-end py-2">
-                  <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@example.com</p>
+            <div className="col-md-6 text-center text-lg-end">
+              <div className="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
+                <div className="me-3 pe-3 border-end py-2">
+                  <p className="m-0"><i className="fa fa-envelope-open me-2"></i>info@example.com</p>
                 </div>
-                <div class="py-2">
-                  <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
+                <div className="py-2">
+                  <p className="m-0"><i className="fa fa-phone-alt me-2"></i>+012 345 6789</p>
                 </div>
               </div>
             </div>
@@ -70,8 +70,8 @@ export default function Home() {
                   <input type="text" className="form-control bg-light border-0 datetimepicker-input"
                     placeholder="Appointment Date" data-target="#date" data-toggle="datetimepicker" style={{ height: 40 }} />
                 </div>
-                <select className="form-select bg-light border-0 mb-3" style={{ height: 40 }}>
-                  <option selected>Select A Service</option>
+                <select className="form-select bg-light border-0 mb-3" style={{ height: 40 }} defaultValue="Select A Service">
+                  <option value="Select A Service" disabled>Select A Service</option>
                   <option value="1">Service 1</option>
                   <option value="2">Service 2</option>
                   <option value="3">Service 3</option>
@@ -134,16 +134,16 @@ export default function Home() {
                 <form>
                   <div className="row g-3">
                     <div className="col-12 col-sm-6">
-                      <select className="form-select bg-light border-0" style={{ height: 55 }}>
-                        <option selected>Select A Service</option>
+                      <select className="form-select bg-light border-0" style={{ height: 55 }} defaultValue="Select A Service">
+                        <option value="Select A Service" disabled>Select A Service</option>
                         <option value="1">Service 1</option>
                         <option value="2">Service 2</option>
                         <option value="3">Service 3</option>
                       </select>
                     </div>
                     <div className="col-12 col-sm-6">
-                      <select className="form-select bg-light border-0" style={{ height: 55 }}>
-                        <option selected>Select Doctor</option>
+                      <select className="form-select bg-light border-0" style={{ height: 55 }} defaultValue="Select A Service">
+                        <option value="Select A Service" disabled>Select Doctor</option>
                         <option value="1">Doctor 1</option>
                         <option value="2">Doctor 2</option>
                         <option value="3">Doctor 3</option>
@@ -196,7 +196,7 @@ export default function Home() {
               <div className="row g-5">
                 <div className="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
                   <div className="rounded-top overflow-hidden">
-                    <img className="img-fluid" src="img/service-1.jpg" alt="" />
+                    <img className="img-fluid" src="img/service-1.jpg" alt="service" />
                   </div>
                   <div className="position-relative bg-light rounded-bottom text-center p-4">
                     <h5 className="m-0">Cosmetic Dentistry</h5>
@@ -204,7 +204,7 @@ export default function Home() {
                 </div>
                 <div className="col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
                   <div className="rounded-top overflow-hidden">
-                    <img className="img-fluid" src="img/service-2.jpg" alt="" />
+                    <img className="img-fluid" src="img/service-2.jpg" alt="service" />
                   </div>
                   <div className="position-relative bg-light rounded-bottom text-center p-4">
                     <h5 className="m-0">Dental Implants</h5>
@@ -218,7 +218,7 @@ export default function Home() {
               <div className="row g-5">
                 <div className="col-md-6 service-item wow zoomIn" data-wow-delay="0.3s">
                   <div className="rounded-top overflow-hidden">
-                    <img className="img-fluid" src="img/service-3.jpg" alt="" />
+                    <img className="img-fluid" src="img/service-3.jpg" alt="service" />
                   </div>
                   <div className="position-relative bg-light rounded-bottom text-center p-4">
                     <h5 className="m-0">Dental Bridges</h5>
@@ -226,7 +226,7 @@ export default function Home() {
                 </div>
                 <div className="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
                   <div className="rounded-top overflow-hidden">
-                    <img className="img-fluid" src="img/service-4.jpg" alt="" />
+                    <img className="img-fluid" src="img/service-4.jpg" alt="service" />
                   </div>
                   <div className="position-relative bg-light rounded-bottom text-center p-4">
                     <h5 className="m-0">Teeth Whitening</h5>
@@ -273,7 +273,7 @@ export default function Home() {
             <div className="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
               <div className="team-item">
                 <div className="position-relative rounded-top" style={{ zIndex: 1 }}>
-                  <Image className="img-fluid rounded-top w-100" src={team1} width={100} alt="" />
+                  <Image className="img-fluid rounded-top w-100" src={team1} width={100} alt="service" />
                   <div className="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
                     <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
                     <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
@@ -290,7 +290,7 @@ export default function Home() {
             <div className="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
               <div className="team-item">
                 <div className="position-relative rounded-top" style={{ zIndex: 1 }}>
-                  <Image className="img-fluid rounded-top w-100" src={team2} alt="" />
+                  <Image className="img-fluid rounded-top w-100" src={team2} alt="service" />
                   <div className="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
                     <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
                     <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
@@ -307,7 +307,7 @@ export default function Home() {
             <div className="col-lg-4 wow slideInUp" data-wow-delay="0.1s">
               <div className="team-item">
                 <div className="position-relative rounded-top" style={{ zIndex: 1 }}>
-                  <Image className="img-fluid rounded-top w-100" src={team3} width={100} alt="" />
+                  <Image className="img-fluid rounded-top w-100" src={team3} width={100} alt="service" />
                   <div className="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
                     <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
                     <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
@@ -324,7 +324,7 @@ export default function Home() {
             <div className="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
               <div className="team-item">
                 <div className="position-relative rounded-top" style={{ zIndex: 1 }}>
-                  <Image className="img-fluid rounded-top w-100" src={team4} width={100} alt="" />
+                  <Image className="img-fluid rounded-top w-100" src={team4} width={100} alt="service" />
                   <div className="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
                     <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
                     <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
@@ -341,7 +341,7 @@ export default function Home() {
             <div className="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
               <div className="team-item">
                 <div className="position-relative rounded-top" style={{ zIndex: 1 }}>
-                  <Image className="img-fluid rounded-top w-100" src={team5} alt="" />
+                  <Image className="img-fluid rounded-top w-100" src={team5} alt="service" />
                   <div className="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
                     <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
                     <Link className="btn btn-primary btn-square m-1" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
@@ -358,73 +358,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style={{ zIndex: 1 }}>
-        <div className="container">
-          <div className="bg-primary p-5">
-            <form className="mx-auto" style={{ maxWidth: 600 }}>
-              <div className="input-group">
-                <input type="text" className="form-control border-white p-3" placeholder="Your Email" />
-                <button className="btn btn-dark px-4">Sign Up</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div className="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style={{ marginTop: -75 }}>
-        <div className="container pt-5">
-          <div className="row g-5 pt-4">
-            <div className="col-lg-3 col-md-6">
-              <h3 className="text-white mb-4">Quick Links</h3>
-              <div className="d-flex flex-column justify-content-start">
-                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Home</Link>
-                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>About Us</Link>
-                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Our Services</Link>
-                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Latest Blog</Link>
-                <Link className="text-light" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Contact Us</Link>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <h3 className="text-white mb-4">Popular Links</h3>
-              <div className="d-flex flex-column justify-content-start">
-                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Home</Link>
-                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>About Us</Link>
-                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Our Services</Link>
-                <Link className="text-light mb-2" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Latest Blog</Link>
-                <Link className="text-light" href="/"><i className="bi bi-arrow-right text-primary me-2"></i>Contact Us</Link>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <h3 className="text-white mb-4">Get In Touch</h3>
-              <p className="mb-2"><i className="bi bi-geo-alt text-primary me-2"></i>123 Street&lsquo; New York&lsquo; USA</p>
-              <p className="mb-2"><i className="bi bi-envelope-open text-primary me-2"></i>info@example.com</p>
-              <p className="mb-0"><i className="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <h3 className="text-white mb-4">Follow Us</h3>
-              <div className="d-flex">
-                <Link className="btn btn-lg btn-primary btn-lg-square rounded me-2" href="/"><i className="fab fa-twitter fw-normal"></i></Link>
-                <Link className="btn btn-lg btn-primary btn-lg-square rounded me-2" href="/"><i className="fab fa-facebook-f fw-normal"></i></Link>
-                <Link className="btn btn-lg btn-primary btn-lg-square rounded me-2" href="/"><i className="fab fa-linkedin-in fw-normal"></i></Link>
-                <Link className="btn btn-lg btn-primary btn-lg-square rounded" href="/"><i className="fab fa-instagram fw-normal"></i></Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="container-fluid text-light py-4" style={{ background: "#051225;" }}>
-        <div className="container">
-          <div className="row g-0">
-            <div className="col-md-6 text-center text-md-start">
-              <p className="mb-md-0">&copy; <a className="text-white border-bottom" href="/">mirzausman.net</a>. All Rights Reserved.</p>
-            </div>
-            <div className="col-md-6 text-center text-md-end">
-              <p className="mb-0">Designed by <a className="text-white border-bottom" href="https://htmlcodex.com">Muhammad Usman</a><br />
-                Distributed by <a className="text-white border-bottom" href="https://themewagon.com">Mirza Usman</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+     <Footer />
     </>
   )
 }

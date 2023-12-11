@@ -1,22 +1,8 @@
 import { Inter } from 'next/font/google'
 import './globals.scss'
-// For Font Awesome
-// import $ from 'jquery';
 import '@fortawesome/fontawesome-free/css/all.css';
-
-// For Bootstrap Icons
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
-// For Owl Carousel
-// import 'owl.carousel/dist/assets/owl.carousel.min.css';
-// import 'owl.carousel';
-
-// For Animate.css
 import 'animate.css';
-
-// For Tempus Dominus Bootstrap 4
-// import 'tempusdominus-bootstrap-4';
-
 
 const inter = Inter({ subsets: ['latin'] })
 
