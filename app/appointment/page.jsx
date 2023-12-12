@@ -124,22 +124,6 @@ export default function page() {
                               <h1 className="text-white mb-4">Make Appointment</h1>
                               <form>
                                   <div className="row g-3">
-                                      {/* <div className="col-12 col-sm-6">
-                                          <select className="form-select bg-light border-0" style={{height: "55px"}}>
-                                              <option selected>Select A Service</option>
-                                              <option value="1">Service 1</option>
-                                              <option value="2">Service 2</option>
-                                              <option value="3">Service 3</option>
-                                          </select>
-                                      </div>
-                                      <div className="col-12 col-sm-6">
-                                          <select className="form-select bg-light border-0" style={{height: "55px"}}>
-                                              <option selected>Select Doctor</option>
-                                              <option value="1">Doctor 1</option>
-                                              <option value="2">Doctor 2</option>
-                                              <option value="3">Doctor 3</option>
-                                          </select>
-                                      </div> */}
                                       <div className="col-12 col-sm-6">
                                           <input type="text" className="form-control bg-light border-0" name="name" onChange={handleChange} placeholder="Your Name" style={{height: "55px"}}/>
                                       </div>
@@ -153,13 +137,6 @@ export default function page() {
                                                   placeholder="Your Contact Detail" style={{height: 55}}/>
                                           </div>
                                       </div>
-                                      {/* <div className="col-12 col-sm-6">
-                                          <div className="time" id="time1" data-target-input="nearest">
-                                              <input type="text"
-                                                  className="form-control bg-light border-0 datetimepicker-input"
-                                                  placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style={{height: 55}}/>
-                                          </div>
-                                      </div> */}
                                       <div className="col-12">
                                           <button className="btn btn-dark w-100 py-3" onClick={submit} type="submit">Make Appointment</button>
                                       </div>

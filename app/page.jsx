@@ -184,8 +184,8 @@ export default function Home() {
           <div className="row g-5 mb-5">
             <div className="col-lg-5 wow zoomIn" data-wow-delay="0.3s" style={{ minHeight: 400 }}>
               <div className="twentytwenty-container position-relative h-100 rounded overflow-hidden">
-                <Image className="position-absolute w-100 h-100" src={imageBefore} width={100} height={100} style={{ objectFit: 'cover' }} />
-                <Image className="position-absolute w-100 h-100" src={imageAfter} width={100} height={100} style={{ objectFit: "cover" }} />
+                <Image className="position-absolute w-100 h-100" src={imageBefore} width={100} height={100} alt="before Image" style={{ objectFit: 'cover' }} />
+                <Image className="position-absolute w-100 h-100" src={imageAfter} width={100} height={100} alt='After Image' style={{ objectFit: "cover" }} />
               </div>
             </div>
             <div className="col-lg-7">
