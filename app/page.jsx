@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Caurosel from './components/Caurosel';
 import Navbar from './components/Navbar';
 import Image from 'next/image';
-import HomeTestimonology from './components/HomeTestimonology';
+// import HomeTestimonology from './components/HomeTestimonology';
 import imageBefore from '../public/img/before.jpg'
 import imageAfter from '../public/img/after.jpg'
 import team1 from '../public/img/team-1.jpg'
@@ -11,34 +11,17 @@ import team2 from '../public/img/team-2.jpg'
 import team3 from '../public/img/team-3.jpg'
 import team4 from '../public/img/team-4.jpg'
 import team5 from '../public/img/team-5.jpg'
+import service1 from '../public/img/service-1.jpg'
+import service2 from '../public/img/service-2.jpg'
+import service3 from '../public/img/service-3.jpg'
+import service4 from '../public/img/service-4.jpg'
 import Footer from './components/Footer';
-//  import('bootstrap/dist/js/bootstrap.bundle.min.js');
+import Topbar from './components/Topbar';
 export default function Home() {
-  // useEffect(() => {
-  //   import('bootstrap/dist/js/bootstrap.bundle.min.js');
-  // }, []);
   return (
     <>
       <div>
-        <div className="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
-          <div className="row gx-0">
-            <div className="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-              <div className="d-inline-flex align-items-center">
-                <small className="py-2"><i className="far fa-clock text-primary me-2"></i>Opening Hours: Mon - Tues : 6.00 am - 10.00 pm, Sunday Closed </small>
-              </div>
-            </div>
-            <div className="col-md-6 text-center text-lg-end">
-              <div className="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
-                <div className="me-3 pe-3 border-end py-2">
-                  <p className="m-0"><i className="fa fa-envelope-open me-2"></i>info@example.com</p>
-                </div>
-                <div className="py-2">
-                  <p className="m-0"><i className="fa fa-phone-alt me-2"></i>+012 345 6789</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+       <Topbar/>
         <Navbar />
         <Caurosel />
       </div>
@@ -60,7 +43,7 @@ export default function Home() {
                   <h6 className="text-white mb-0">Sunday</h6>
                   <p className="mb-0"> 8:00am - 5:00pm</p>
                 </div>
-                <a className="btn btn-light" href="/">Appointment</a>
+                <Link className="btn btn-light" href="/appointment">Appointment</Link>
               </div>
             </div>
             <div className="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
@@ -76,7 +59,7 @@ export default function Home() {
                   <option value="2">Service 2</option>
                   <option value="3">Service 3</option>
                 </select>
-                <a className="btn btn-light" href="/">Search Doctor</a>
+                <Link className="btn btn-light" href="/">Search Doctor</Link>
               </div>
             </div>
             <div className="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
@@ -196,7 +179,7 @@ export default function Home() {
               <div className="row g-5">
                 <div className="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
                   <div className="rounded-top overflow-hidden">
-                    <img className="img-fluid" src="img/service-1.jpg" alt="service" />
+                    <Image className="img-fluid" src={service1} alt="service" />
                   </div>
                   <div className="position-relative bg-light rounded-bottom text-center p-4">
                     <h5 className="m-0">Cosmetic Dentistry</h5>
@@ -204,7 +187,7 @@ export default function Home() {
                 </div>
                 <div className="col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
                   <div className="rounded-top overflow-hidden">
-                    <img className="img-fluid" src="img/service-2.jpg" alt="service" />
+                    <Image className="img-fluid" src={service2} alt="service" />
                   </div>
                   <div className="position-relative bg-light rounded-bottom text-center p-4">
                     <h5 className="m-0">Dental Implants</h5>
@@ -218,7 +201,7 @@ export default function Home() {
               <div className="row g-5">
                 <div className="col-md-6 service-item wow zoomIn" data-wow-delay="0.3s">
                   <div className="rounded-top overflow-hidden">
-                    <img className="img-fluid" src="img/service-3.jpg" alt="service" />
+                    <Image className="img-fluid" src={service3} alt="service" />
                   </div>
                   <div className="position-relative bg-light rounded-bottom text-center p-4">
                     <h5 className="m-0">Dental Bridges</h5>
@@ -226,7 +209,7 @@ export default function Home() {
                 </div>
                 <div className="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
                   <div className="rounded-top overflow-hidden">
-                    <img className="img-fluid" src="img/service-4.jpg" alt="service" />
+                    <Image className="img-fluid" src={service4} alt="service" />
                   </div>
                   <div className="position-relative bg-light rounded-bottom text-center p-4">
                     <h5 className="m-0">Teeth Whitening</h5>
@@ -251,8 +234,8 @@ export default function Home() {
               <div className="offer-text text-center rounded p-5">
                 <h1 className="display-5 text-white">Save 30% On Your First Dental Checkup</h1>
                 <p className="text-white mb-4">Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et dolore et at sea ea at dolor justo ipsum duo rebum sea. Eos vero eos vero ea et dolore eirmod diam duo lorem magna sit dolore sed et.</p>
-                <a href="appointment" className="btn btn-dark py-3 px-5 me-3">Appointment</a>
-                <a href="/" className="btn btn-light py-3 px-5">Read More</a>
+                <Link href="appointment" className="btn btn-dark py-3 px-5 me-3">Appointment</Link>
+                <Link href="/" className="btn btn-light py-3 px-5">Read More</Link>
               </div>
             </div>
           </div>
@@ -267,7 +250,7 @@ export default function Home() {
               <div className="section-title bg-light rounded h-100 p-5">
                 <h5 className="position-relative d-inline-block text-primary text-uppercase">Our Dentist</h5>
                 <h1 className="display-6 mb-4">Meet Our Certified & Experienced Dentist</h1>
-                <a href="appointment" className="btn btn-primary py-3 px-5">Appointment</a>
+                <Link href="appointment" className="btn btn-primary py-3 px-5">Appointment</Link>
               </div>
             </div>
             <div className="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
@@ -358,7 +341,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-     <Footer />
+      <Footer />
     </>
   )
 }
